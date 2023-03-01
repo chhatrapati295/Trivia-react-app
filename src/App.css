@@ -1,0 +1,162 @@
+.app{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: #020230;
+    align-items: center;
+}
+.left{
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(to bottom , rgba(0,0,0,0) , #020230) , url(./assets/bg.jpg) center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.leftTop{
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+.timer{
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 50%;
+}
+/* .trivia{
+    width: 100%;
+    border: 2px solid  red;
+    text-align: center;
+} */
+.leftBottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.question{
+    border: 2px solid white;
+    width: 80%;
+    text-align: center;
+    padding: 0.7rem;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    background: linear-gradient(black,#020230);
+}
+.answers{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: 2px solid red; */
+    height: 40%;
+}
+.answer{
+    width: 40%;
+    text-align: center;
+    border: 1px solid white;
+    padding: 0.7rem;
+    border-radius: 4px;
+    background: #1f0149;
+}
+.answer:hover{
+    background-color: rgb(33, 33, 248);
+    transition: all 0.3s ease-in-out;
+}
+.right{
+    width: 25%;
+    height: 100%;
+    background: #01011e;
+    color: white;
+}
+.amountLists{
+    list-style: none;
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    gap: 5px;
+}
+.amountListItem{
+    text-align: center;
+    flex: 1;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+        width: 100%;
+        gap: 10px;
+        /* border: 2px solid orange; */
+}
+.number{
+    width: 20%;
+    font-size: 1.4rem;
+    /* background: pink */
+    ;
+}
+.amount{
+    font-size: 1.4rem;
+}
+.active{
+    background: teal;
+    border-radius: 4px;
+}
+.correct{
+    background-color: green;
+}
+.wrong{
+    background-color: crimson;
+}
+.endText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.start{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.inputStart , .btnStart{
+    padding: 0.5rem;
+    outline: none;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+.btnStart{
+    font-weight: bold;
+}
+ 
+@media (max-width : 768px) {
+    .app{
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+    }
+    .leftBottom{
+        width: 100%;
+    }
+    .question , .answers , .endText{
+        width: 100%;
+        text-align: center;
+    }
+}
+
